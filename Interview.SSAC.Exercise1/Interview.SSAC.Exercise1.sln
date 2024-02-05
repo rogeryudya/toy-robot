@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.SSAC.Exercise1", "Interview.SSAC.Exercise1.csproj", "{39B47380-3CFC-4120-9D37-AD5E92A65DBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.SSAS.Exercise1.Tests", "..\Interview.SSAS.Exercise1.Tests\Interview.SSAS.Exercise1.Tests.csproj", "{FEDDE3CD-2610-4FB5-9A6B-40218D48C765}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39B47380-3CFC-4120-9D37-AD5E92A65DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B47380-3CFC-4120-9D37-AD5E92A65DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B47380-3CFC-4120-9D37-AD5E92A65DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B47380-3CFC-4120-9D37-AD5E92A65DBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEDDE3CD-2610-4FB5-9A6B-40218D48C765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEDDE3CD-2610-4FB5-9A6B-40218D48C765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEDDE3CD-2610-4FB5-9A6B-40218D48C765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEDDE3CD-2610-4FB5-9A6B-40218D48C765}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9F875CA-4F15-4E4C-B1C7-D31A37B0718C}
+	EndGlobalSection
+EndGlobal
