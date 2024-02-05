@@ -51,6 +51,17 @@ namespace Interview.SSAS.Exercise1.Tests
             Assert.That(actual, Is.EqualTo("Output: 4,4,SOUTH"));
         }
 
+        [TestCase("place 0,0,north", "left", "left", "move", "move", "move", "move", "report")]
+        //04
+        public void Move_To_Bottom_Left(params string[] inputs)
+        {
+            SetupInputs(inputs);
+            var outputs = ExecuteMain();
+
+            var actual = outputs[0];
+
+            Assert.That(actual, Is.EqualTo("Output: 0,4,SOUTH"));
+        }
         #endregion
 
         #region UnHappy

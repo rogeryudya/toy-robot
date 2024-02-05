@@ -19,7 +19,7 @@ internal class RotateCommand : Command
         if (_robot.IsValid)
         {
             var rotated = (int)_robot.Facing + _rotateDiection;
-            _robot.Facing = rotated < 0 ? RobotDirection.WEST : (RobotDirection)(rotated % 4);
+            _robot.Facing = rotated < 0 ? RobotDirection.WEST : rotated == 4 ? RobotDirection.NORTH : (RobotDirection)rotated;
         }
     }
 }
