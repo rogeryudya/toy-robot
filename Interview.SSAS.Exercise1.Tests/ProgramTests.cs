@@ -28,7 +28,7 @@ namespace Interview.SSAS.Exercise1.Tests
         [TestCase("place 0,0,west", "left", "left", "move", "move", "move", "move", "report")]
         [TestCase("place 0,0,west", "right", "right", "move", "move", "move", "move", "report")]
         //40
-        public void Move_To_Top_Right(params string[] inputs)
+        public void Move_To_Bottom_Right(params string[] inputs)
         {
             SetupInputs(inputs);
             var outputs = ExecuteMain();
@@ -38,29 +38,29 @@ namespace Interview.SSAS.Exercise1.Tests
             Assert.That(actual, Is.EqualTo("Output: 4,0,EAST"));
         }
 
-        [TestCase("place 0,0,north", "right", "move", "right", "move", "left", "move", "right", "move", "left", "move", "right", "move", "left", "move", "right", "move", "report")]
-        [TestCase("place 0,0,east", "move", "right", "move", "left", "move", "right", "move", "left", "move", "right", "move", "left", "move", "right", "move", "report")]
+        [TestCase("place 0,0,north", "right", "move", "left", "move", "right", "move", "left", "move", "right", "move", "left", "move", "right", "move", "left", "move", "report")]
+        [TestCase("place 0,0,east", "move", "left", "move", "right", "move", "left", "move", "right", "move", "left", "move", "right", "move", "left", "move", "report")]
         //44
-        public void Move_To_Bottom_Right(params string[] inputs)
+        public void Move_To_Top_Right(params string[] inputs)
         {
             SetupInputs(inputs);
             var outputs = ExecuteMain();
 
             var actual = outputs[0];
 
-            Assert.That(actual, Is.EqualTo("Output: 4,4,SOUTH"));
+            Assert.That(actual, Is.EqualTo("Output: 4,4,NORTH"));
         }
 
-        [TestCase("place 0,0,north", "left", "left", "move", "move", "move", "move", "report")]
+        [TestCase("place 0,0,north", "move", "move", "move", "move", "report")]
         //04
-        public void Move_To_Bottom_Left(params string[] inputs)
+        public void Move_To_Top_Left(params string[] inputs)
         {
             SetupInputs(inputs);
             var outputs = ExecuteMain();
 
             var actual = outputs[0];
 
-            Assert.That(actual, Is.EqualTo("Output: 0,4,SOUTH"));
+            Assert.That(actual, Is.EqualTo("Output: 0,4,NORTH"));
         }
         #endregion
 
@@ -78,10 +78,10 @@ namespace Interview.SSAS.Exercise1.Tests
             Assert.That(actual, Is.EqualTo("Output: Robot was not placed on the table"));
         }
 
-        [TestCase(RobotDirection.NORTH, "place 0,0,north", "move", "report")]
+        [TestCase(RobotDirection.SOUTH, "place 0,0,south", "move", "report")]
         [TestCase(RobotDirection.WEST, "place 0,0,west", "move", "report")]
-        [TestCase(RobotDirection.WEST, "place 0,0,east", "right", "right", "move", "report")]
-        //44
+        [TestCase(RobotDirection.SOUTH, "place 0,0,north", "right", "right", "move", "report")]
+        //00
         public void Move_Out_Of_Table(RobotDirection facing, params string[] inputs)
         {
             SetupInputs(inputs);

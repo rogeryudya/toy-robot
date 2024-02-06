@@ -20,13 +20,13 @@ internal class MoveCommand : Command
             switch (_robot.Facing)
             {
                 case RobotDirection.NORTH:
-                    _robot.PositionY = Math.Max(_robot.PositionY.Value - 1, 0);
+                    _robot.PositionY = Math.Min(_robot.PositionY.Value + 1, CommandConst.TABLE_MAX_Y - 1);
                     break;
                 case RobotDirection.EAST:
                     _robot.PositionX = Math.Min(_robot.PositionX.Value + 1, CommandConst.TABLE_MAX_X - 1);
                     break;
                 case RobotDirection.SOUTH:
-                    _robot.PositionY = Math.Min(_robot.PositionY.Value + 1, CommandConst.TABLE_MAX_Y - 1);
+                    _robot.PositionY = Math.Max(_robot.PositionY.Value - 1, 0);
                     break;
                 case RobotDirection.WEST:
                     _robot.PositionX = Math.Max(_robot.PositionX.Value - 1, 0);
